@@ -144,3 +144,61 @@ The Twelve Factor App:
 -- The process formation is the array of processes that are used to do the app’s regular business (such as handling web requests) as it runs. Separately, developers will often wish to do one-off administrative or maintenance tasks for the app.
 
 -- Admin code must shift with the application code to prevent the sync issues
+
+
+
+
+==========================
+==========================
+Atomic Design: 
+==========================
+==========================
+
+-- Principle of Atomic Design: 
+the principle consists of 5 separate steps: 
+- Atoms
+- molecules
+- Organisms
+- Templates
+- Pages
+
+==============
+Atoms: 
+==============
+Atoms are the most basic components that are used to build the UI's such as buttons, shapes, icons, text feilds, text labels.
+
+==============
+Molecules
+==============
+ 
+- These can be defined as the group of atoms bound together to be the smallest funcdamental unit.
+- Molecule can be created by combining 2 or more atoms.
+- Eg. an input feild and a button can be combined to form a form.
+
+==============
+Organisms:
+==============
+
+- Organisms can be classsified as the combination of molecules i.e. made by combining 2 or more molcules.
+
+Eg. forming of more complex UI's using the molecular compenents such as the login page.
+
+
+==============
+Templates
+==============
+
+- Templates can be defined as the combination of organims and indivisuals to create the complete design.
+
+- multiple templates can be used to form a interface design.
+
+
+
+==============
+Page
+==============
+
+- Pages are the highest level of fidelity. Most indivisuals spend their time on pages.
+
+- It is the pages section that is used to test the system's efficiency.
+- By seeing the end result on the page we can tweak the atoms, molecules and organisms as well as templates.
