@@ -1,8 +1,24 @@
 // function expression that takes in a number and returns its square
+var prompt = require('prompt');
 
-function calculateSquare(a){
-    return a*a;
+const schema = {
+    properties: {
+        num: {
+            pattern: /^[0-9]+$/,
+            message: "Enter only digits",
+            required: true
+        }
+    }
+};
+
+function calculateSquare(num){
+    return num * num;
 }
 
-const no = prompt("Enter a no to calculate square.")
-alert(calculateSquare(Number(no)));
+prompt.start();
+prompt.get(schema, function(err, result){
+        if (typeof Number(result.num) != 'number'){
+        throw err;
+    }
+    console.log(`The Square of ${result.num} is : `, calculateSquare(Number(result.num)));
+});

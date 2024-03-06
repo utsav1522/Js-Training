@@ -1,9 +1,24 @@
 // function expression that takes in a number and returns true if it's even and false if it's odd
 
-function checkOddEven(num){
-    if (num%2 == 0) return true;
-    if (num%2 != 0) return false;
-}
+var prompt = require('prompt');
+const schema = {
+    properties: {
+        num:{
+            pattern: /^[0-9]+$/,
+            messgage: "Enter a number",
+            required: true
+        }
+    }
+};
 
-const num = prompt("Enter a number:");
-console.log(checkOddEven(Number(num)));
+function checkOddOrEven(num){
+    if (num%2 == 0)return true;
+    else return false;
+}
+prompt.start();
+prompt.get(schema, function(err, result){
+        if (typeof Number(result.num) != 'number'){
+        throw err;
+    }
+    console.log(`The output is : `,checkOddOrEven(Number(result.num)));
+});

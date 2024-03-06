@@ -46,4 +46,4 @@ const checkOddEven = (num) => {
 
 const num = prompt("Enter a number:");
 
-console.log(checkOddEven(Number(num)));ss
+console.log(checkOddEven(Number(num)));
