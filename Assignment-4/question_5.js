@@ -1,3 +1,4 @@
+// program to convert given string in camel case ("hello john doe" => helloJohnDoe)
 
 const camelCase = (str) => {
     let arr = str.split(" ");

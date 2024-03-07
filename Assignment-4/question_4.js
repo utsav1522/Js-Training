@@ -1,3 +1,5 @@
+// program to convert given string to upperCase OR lowerCase
+
 const prompt = require ('prompt');
 const schema = {
   properties: {

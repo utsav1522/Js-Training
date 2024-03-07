@@ -1,3 +1,5 @@
+// program to display intersection of two array
+
 const arr1 = [1,2,3,4,5,6,7];
 const arr2 = [5,6,7,9,10,11,12,13];
 
