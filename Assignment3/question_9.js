@@ -1,10 +1,5 @@
 // Fibbonacci Series: 
 
-const readline = require("readline").createInterface({
-    input: process.stdin,
-    output: process.stdout,
-  });
-
   const printFibbonacci = (num) => {
     let a = 0;
     let b = 1;
@@ -17,11 +12,5 @@ const readline = require("readline").createInterface({
         b = c;
     }
   }
+  printFibbonacci(Number(10));
 
-  readline.question("Enter a number:", (num) => {
-    if (typeof Number(num) != "number") {
-      console.log("a number is not entered ! ");
-    }
-    printFibbonacci(Number(num));
-    readline.close();
-  });
