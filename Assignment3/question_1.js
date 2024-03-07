@@ -1,3 +1,5 @@
+// program to perform functionality of a calculator (add,sub,multiply,divide)
+
 const prompt = require("prompt");
 
 const schema = {

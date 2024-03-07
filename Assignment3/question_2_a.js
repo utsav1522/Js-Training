@@ -4,12 +4,12 @@
 // 7 8 9 10
 
 
-let no = 1;
+let num = 1;
 for (let i = 1; i <= 4; i++){
     let str = "";
     for (let j = 0; j<i; j++){
-        str += no + " ";
-        no++;
+        str += num + " ";
+        num++;
     }
     console.log(str);
 }
