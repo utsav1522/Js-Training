@@ -12,6 +12,6 @@ const uniqueElements = (arr) => {
     }
   }
   return unique;
-}
+};
 
 console.log(uniqueElements(arr));
