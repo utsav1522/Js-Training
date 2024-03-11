@@ -24,7 +24,7 @@ class Person {
     return this.#firstName + this.#lastName;
   }
 
-  averageAge(personArray) {
+  static averageAge(personArray) {
     let sum = 0;
     personArray.forEach((element) => {
       sum += Number(element.age);
@@ -38,4 +38,4 @@ let person1 = new Person("abc", "def", "10");
 let person2 = new Person("ghi", "jkl", "20");
 let person3 = new Person("mno", "pqr", "30");
 const personObj = [person1, person2, person3];
-console.log(person3.averageAge(personObj));
+console.log(Person.averageAge(personObj));
