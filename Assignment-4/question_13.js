@@ -1,24 +1,20 @@
 // program to return inverse of an array
 
 const arr = [3, 4, 2, 0, 1];
-const inverseArr = new Array(arr.length);
+const inverseArr = [];
 
 const makeInverseArray = (arr) => {
   for (i in arr) {
     inverseArr[arr[i]] = i;
-  }
-};
-
-const checkInverse = (arr, inverseArr) => {
-  for (i in arr) {
-    if (arr[i] != inverseArr[i]) {
-      console.log("The array inverse is not possible");
+    console.log(inverseArr[arr[i]]);
+    console.log(arr[arr[i]], 'arr[arr[i]]')
+    if (Number(inverseArr[arr[i]]) !== Number(arr[arr[i]])){
       return false;
     }
   }
-  return true;
+  console.log(inverseArr)
+  return true
 };
 
-makeInverseArray(arr);
-let res = checkInverse(arr, inverseArr);
-res === true ? console.log(inverseArr) : console.log("Not inversible");
+
+console.log(makeInverseArray(arr));

@@ -4,11 +4,12 @@
 const frequencyChar = (str) => {
     let freq = {};
     for(let i = 0;  i < str.length; i++){
-        let char = str.charAt(i);
+        let char = str[i];
         if (freq[char]){
             freq[char]++;
         }else{
             freq[char] = 1;
+            
         }
     }
     let ans = "";

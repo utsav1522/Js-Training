@@ -15,5 +15,4 @@ const reverseArr = (arr) => {
   }
   return arr;
 };
-
 console.log(reverseArr(arr));

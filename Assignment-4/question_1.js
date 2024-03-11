@@ -10,4 +10,4 @@ const checkUnique = (str) => {
   return uniqueStr;
 };
 
-console.log(checkUnique("Yellow"));
+console.log(checkUnique("Hello My name is Yellow"));

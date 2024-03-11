@@ -8,4 +8,4 @@ const reverseStirng = (str) => {
   return reverseStr;
 };
 
-console.log(reverseStirng("Utsav"));
+console.log(reverseStirng("Hello My name is Yellow"));
