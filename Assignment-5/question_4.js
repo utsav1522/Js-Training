@@ -5,6 +5,8 @@ const createDeepCopy = (obj) => {
   for (key in obj) {
     deepCopyObj[key] = obj[key];
   }
+  obj["lastName"] = "dddd" ;
+  deepCopyObj["firstName"] = "aaa";
   return deepCopyObj;
 };
 
@@ -16,5 +18,5 @@ const obj = {
   college: "Jaypee institute of Information Technology",
   currentCompany: "Successive Digital",
 };
-
-console.log(createDeepCopy(obj));
+console.log(createDeepCopy(obj), "deepcopy");
+console.log(obj, "obj")

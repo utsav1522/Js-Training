@@ -19,7 +19,7 @@ const obj = [
   },
 ];
 
-const sorttedObj = obj.sort(function (a, b) {
+const sorttedObj = obj.sort( (a, b) =>  {
   let x = Number(a["age"]);
   let y = Number(b["age"]);
 
