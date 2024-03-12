@@ -15,10 +15,10 @@ class Person {
     this.#interests = interests;
   }
   checkAge() {
-    if (age < 1) {
+    if (thisage < 1) {
       this.#age = 1;
     }
-    if (age > 115) {
+    if (this.#age > 115) {
       console.log("Age is not realistic");
       return;
     }
