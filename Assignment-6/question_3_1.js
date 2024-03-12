@@ -16,10 +16,10 @@ class Person {
   }
 
   checkAge() {
-    if (age < 1) {
+    if (this.#age < 1) {
       this.#age = 1;
     }
-    if (age > 115) {
+    if (this.#age > 115) {
       console.log("Age is not realistic");
       return;
     }
@@ -44,7 +44,7 @@ class Person {
     console.log("Hello !!!");
     console.log("My Name is : ", this.#name, ". ");
     console.log("I am ", this.#age, " years old.");
-    if (age > 100) {
+    if (this.#age > 100) {
       console.log("Congratulation !!! You hit a century.");
     }
     console.log("My interests are ", interestsStr);

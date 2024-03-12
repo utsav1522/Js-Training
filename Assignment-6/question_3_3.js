@@ -16,7 +16,7 @@ class Person {
     this.#interests = interests;
   }
   checkAge() {
-    if (age < 1) {
+    if (this.#age < 1) {
       this.#age = 1;
     }
     if (age > 115) {
