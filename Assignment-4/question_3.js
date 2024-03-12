@@ -1,29 +1,23 @@
-const prompt = require ('prompt');
+// program to give count of variables in a string ("abcabcdabbcc" => "a3b4c4d1")
 
-const schema = {
-    properties: {
-        str: {
-            pattern: /^[a-zA-Z0-9_]*$/,
-            messgage: "Enter the string with alphabets and digits",
-            required: true
-        }
-    }
-}
 
-const giveFrequency = (str) => {
-    let freqObj = {};
-    for (let i = 0; i < str.length; i++){
-        if (freqObj[str[i]]){
-            freqObj[str[1]] += 1;
+const frequencyChar = (str) => {
+    let freq = {};
+    for(let i = 0;  i < str.length; i++){
+        let char = str[i];
+        if (freq[char]){
+            freq[char]++;
         }else{
-            freqObj[str[i]] = 1;
+            freq[char] = 1;
+            
         }
     }
-    console.log(freqObj);
+    let ans = "";
+    for (key in freq){
+        ans += (key + freq[key]);
+    }
+    return ans;
 }
 
-prompt.start();
-prompt.get(schema, (err, result) => {
-    giveFrequency(result.str);
-    // console.log(freq);
-});
+let str = "aaaabbbcccc";
+console.log(frequencyChar(str));

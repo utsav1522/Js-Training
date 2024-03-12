@@ -1,24 +1,21 @@
+// program to convert given string in camel case ("hello john doe" => helloJohnDoe)
 
 const camelCase = (str) => {
-    let arr = str.split(" ");
-    console.log(arr)
-    let camelCaseStr = ""
-    camelCaseStr+=arr[0];
-    for (let i = 1;  i< arr.length; i++){
-        let word = "";
-        let toConvert = arr[i];
-        for (let j = 0; j< toConvert.lengtj; j++){
-            if (j == 0){
-                word+=toConvert[j].toUpperCase();
-            }else{
-                word+=toConvert[j];
-            }
-        }
-        camelCaseStr+=word;
+  let ans = "";
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] == " ") {
+      continue;
     }
-    console.log(camelCaseStr);
-}
+    if (str[i - 1] == " ") {
+      ans += str[i].toUpperCase();
+    } else {
+      ans += str[i];
+    }
+  }
+  return ans;
+};
 
-
-let str = "hello john doe";
-camelCase(str)
+str = "Hello jOhn doe";
+str = str.trim();
+str = str.toLocaleLowerCase()
+console.log(camelCase(str));

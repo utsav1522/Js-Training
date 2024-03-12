@@ -1,26 +1,28 @@
 // program to reverse a string ("Hello John" => "olleH nhoJ")
 
-const prompt = require ('prompt');
-
-const schema = {
-    properties: {
-        str: {
-            pattern: /^[a-zA-Z0-9_]*$/,
-            messgage: "Enter the string with alphabets and digits",
-            required: true
-        }
-    }
-}
+const reverseWord = (str) => {
+  var splitString = str.split("");
+  var reverseArray = splitString.reverse();
+  var joinArray = reverseArray.join("");
+  return joinArray;
+};
 
 const reverseStirng = (str) => {
-    let reverseStr = ""
-    for (let i = str.length-1; i >= 0; i--){
-        reverseStr+=str[i];
+  let reverseStr = "";
+  let word = "";
+  for (let i = 0; i <= str.length - 1; i++) {
+    word += str[i];
+    if (str[i] === " ") {
+      word = reverseWord(word);
+      reverseStr += word + " ";
+      word = "";
     }
-    return reverseStr;
-}
-
-prompt.start();
-prompt.get(schema,(err, result) => {
-    console.log(reverseStirng(result.str));
-});
+  }
+  word = reverseWord(word);
+  reverseStr += word + " ";
+  word = "";
+  return reverseStr;
+};
+let str = "Hello My name is Yellow";
+str.trim();
+console.log(reverseStirng(str));

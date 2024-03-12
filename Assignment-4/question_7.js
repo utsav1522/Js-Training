@@ -1,17 +1,18 @@
-const arr = [1,2,3,4,5,6,7,1,2,3,4,5,6,7, 8];
+// program to find index of duplicate elements in an array
 
-const obj = {}
-for (i in arr){
-    if (obj[arr[i]] != undefined){
-        obj[arr[i]].push(i);
-    }else{
-        obj[arr[i]] = [i];
-    }
+const arr = [1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7, 8];
+
+const obj = {};
+for (i in arr) {
+  if (obj[arr[i]] != undefined) {
+    obj[arr[i]].push(i);
+  } else {
+    obj[arr[i]] = [i];
+  }
 }
 
-for (key in obj){
-    if (obj[key].length == 1){
-        delete obj[key];
-    }
+for (key in obj) {
+  if (obj[key].length != 1) {
+    console.log(key + " : " + obj[key]);
+  }
 }
-console.log(obj)
