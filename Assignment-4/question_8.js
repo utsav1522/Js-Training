@@ -11,12 +11,7 @@ const uniqueElements = (arr) => {
       continue;
     }
   }
-  let ans = [];
-  for (key in unique){
-    ans.push(key);
-  }
-  
-  return ans;
+  return Object.keys(unique);
   
 };
 
