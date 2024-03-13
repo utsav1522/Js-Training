@@ -1,23 +1,27 @@
 // Convert a callback-based API to a Promise-based API
-// (function fetchData(callback) {
-// setTimeout(() => {
-// callback(null, "Data fetched successfully");
-// }, 1000);
-// })
+// function fetchData(callback) {
+//   setTimeout(() => {
+//     callback(null, "Data fetched successfully");
+//   }, 1000);
+// }
 
+const util = require("util");
 
-// const mypromise= new Promise((resolve,reject)=>{
-//     setTimeout(()=>{
-//         resolve("Data fetched successfully")
-//     },1000)
-// })
-  
-// mypromise.then((data)=> console.log(data)).catch((err)=> console.log(err));
+function fetchData(callback) {
+  setTimeout(() => {
+    callback(null, "Data fetched successfully");
+  }, 1000);
+}
 
-function add(a, b, callback) {
-    setTimeout(() => callback(null, a + b), 100);
+const callback = (a, b) => {
+  if (!a) {
+    console.log("callback called");
   }
-  
-  add(1, 2, (err, sum) => {
-    console.log(sum);
-  });
+};
+
+const promiseFetchData = util.promisify(fetchData);
+promiseFetchData(callback)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((err) => console.log(err));
