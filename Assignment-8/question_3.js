@@ -18,6 +18,6 @@ for (let i = 0; i < myArray.length; i++) {
 
 let total = 0;
 myArray.forEach(function (element) {
-  total += 1;
+  total += element;
 });
 console.log("The total of all elements in the array is: " + total);
