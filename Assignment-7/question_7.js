@@ -9,15 +9,15 @@ const giveRes = async (p1, p2, p3) => {
 }
 
 const p1 =new Promise((resolve, reject) => {
-    resolve("Promise 1 resolved");
+    setTimeout(() => resolve("Promise 1 resolved"), 2000);
 });
 
 const p2 =new Promise((resolve, reject) => {
-    resolve("Promise 2 resolved");
+    setTimeout(() => resolve("Promise 2 resolved"), 1000);
 });
 
 const p3 =new Promise((resolve, reject) => {
-    resolve("Promise 3 resolved");
+    setTimeout(() => resolve("Promise 3 resolved"), 5000);
 });
 
 giveRes(p1, p2, p3)

@@ -6,12 +6,12 @@ const p1 = new Promise((resolve, reject) => {
   resolve("Promise 1 resolved");
 })
   .then((msg) => {
-    console.log(msg)
+    console.log(msg);
     return new Promise((resolve, reject) => {
-      if (!resolve("Promise 2 resolved")) {
-        reject("Promise 2 rejected");
-      } else {
+      if (true) {
         resolve("Promise 2 resolved");
+      } else {
+        reject("Promise 2 rejected");
       }
     });
   })
@@ -21,10 +21,10 @@ const p1 = new Promise((resolve, reject) => {
   .then((msg2) => {
     console.log(msg2);
     return new Promise((resolve, reject) => {
-      if (!resolve("Promise 3 resolved")) {
-        reject("Promise 3 rejected");
-      } else {
+      if (true) {
         resolve("Promise 3 resolved");
+      } else {
+        reject("Promise 3 rejected");
       }
     });
   })

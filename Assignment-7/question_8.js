@@ -2,14 +2,9 @@
 // APIs in parallel and then performs some operation on the combined data,
 // using async/await.
 
-const giveRes = (p1, p2, p3) => {
-  Promise.all([p1, p2, p3]).then((values) => console.log(values));
-};
-
 const fetchData1 = async (url, heads) => {
   let response = await fetch(url, { headers: heads });
-  let data = await response.json();
-  return data;
+  return response.json();
 };
 
 const url1 =
@@ -32,7 +27,16 @@ const headers3 = {
 };
 let p3 = fetchData1(url1, headers1);
 
-Promise.all([p1, p2, p3]).then(async function (values) {
-  values["added manually"] = "Value Added by Utsav Jain";
-  console.log(values)
+Promise.all([p1, p2, p3]).then((result) => {
+  let res1 = result[0];
+  let res2 = result[1];
+  let res3 = result[2];
+  console.log("res1 is :  ", res1);
+  console.log("res2 is :  ",res2);
+  console.log("res3 is :  ",res3);
+  result["dataFetchedBy"] = "Utsav Jain";
+  console.log(result)
 });
+
+// values["added manually"] = "Value Added by Utsav Jain";
+// console.log(values)

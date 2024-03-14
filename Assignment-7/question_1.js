@@ -13,8 +13,18 @@ const fetchPromise = fetch(url, {
   },
 });
 
-fetchPromise
-  .then((response) => response.json())
-  .then((data) => console.log(data));
+const fun = (callback) => {
+  fetchPromise
+    .then((response) => response.json())
+    .then((data) => callback(null,data));
+};
+
+fun((err, data) => {
+  if (err) {
+    console.log(err)
+  }else{
+    console.log(data);
+  }
+});
 
 console.log("End");
