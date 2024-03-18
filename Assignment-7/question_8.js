@@ -32,10 +32,10 @@ Promise.all([p1, p2, p3]).then((result) => {
   let res2 = result[1];
   let res3 = result[2];
   console.log("res1 is :  ", res1);
-  console.log("res2 is :  ",res2);
-  console.log("res3 is :  ",res3);
+  console.log("res2 is :  ", res2);
+  console.log("res3 is :  ", res3);
   result["dataFetchedBy"] = "Utsav Jain";
-  console.log(result)
+  console.log(result);
 });
 
 // values["added manually"] = "Value Added by Utsav Jain";
